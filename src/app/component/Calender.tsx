@@ -10,7 +10,7 @@ export const Calender = () => {
     const {selectedDate, setSelectedDate} = useSelectedDate();
     return (
         <div className="h-screen w-screen bg-white text-black  flex flex-col justify-center">
-            <div className="mx-10 my-5 "><Header /></div>
+            <div className={`mx-10 my-5 ${currentView === 'year' && "md:pt-[12%]"}`}><Header /></div>
             <br />
             {currentView === 'year' && 
             <div className="h-full"><YearCalendar selectedDate={selectedDate} setSelectedDate={setSelectedDate}/> </div>}
